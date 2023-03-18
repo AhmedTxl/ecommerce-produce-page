@@ -35,7 +35,7 @@
       <div class="self-center mt-2">
         <img src="../assets/illustration-thank-you.svg" alt="">
       </div>
-      <div class="p-1 pr-4 pl-4 rounded-2xl self-center text-orange-400 text-[15px] mt-8" 
+      <div class="p-1 pr-4 pl-4 rounded-2xl self-center text-orange-400 text-base mt-8" 
            style="background: rgb(34 43 54);">
         You selected {{ ratingChoice }} out of 5
       </div>
