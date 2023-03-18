@@ -21,7 +21,6 @@
           <span class="select-none mt-1" :for="'rating' + label">{{ label }}</span>
         </li>
       </ul>
-      <p class="mt-4">Number {{ ratingChoice }} is choosen</p>
       <button @click.prevent="activePhase = 2"
         class="bg-orange-600 uppercase tracking-wider hover:bg-slate-100 active:bg-slate-200 text-white-700 font-normal hover:text-orange-600 py-3 px-4 rounded-3xl mt-6">
         submit
