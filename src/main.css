@@ -106,7 +106,7 @@ h6 {
   transition: 0.3s ease;
 }
 
-span {
+label {
   position: absolute;
   pointer-events: none;
   appearance: none;
