@@ -17,7 +17,7 @@
         <li @click="checkSelectedChoice" :id="'choice' + label"
           class="flex flex-row circularBackground bg-[#2f394b9e] hover:bg-orange-600 active:bg-orange-700"
           v-for="label in ratings" :key="label">
-          <input v-model="selected" :value="label" type="radio" name="ratings" :id="'choice' + label">
+          <input v-model="selected" :value="label" type="radio" name="ratings" :id="'element' + label">
           <span class="select-none mt-1" :for="'rating' + label">{{ label }}</span>
         </li>
       </ul>
@@ -113,17 +113,16 @@ function checkSelectedChoice() {
     if (items[i].firstChild.checked) {
       ratingChoice = items[i].firstChild.value;
 
-      document.getElementById(items[i].firstChild.id).classList.remove('bg-[#2f394b9e]');
-      document.getElementById(items[i].firstChild.id).classList.add('bg-[#3e495d]');
+      document.getElementById(items[i].id).classList.remove('bg-[#2f394b9e]');
+      document.getElementById(items[i].id).classList.add('bg-[#3e495d]');
     } else {
-      document.getElementById(items[i].firstChild.id).classList.remove('bg-[#3e495d]');
-      document.getElementById(items[i].firstChild.id).classList.add('bg-[#2f394b9e]');
+      document.getElementById(items[i].id).classList.remove('bg-[#3e495d]');
+      document.getElementById(items[i].id).classList.add('bg-[#2f394b9e]');
     }
   }
 }
 
 var activePhase = ref(1);
-const selected = ref(1);
 const paragraph = ref(
   "Please let us know how we did with your support request." +
   "All feedback is appreciated to help us improve our offering!"
