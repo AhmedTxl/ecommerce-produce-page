@@ -18,7 +18,7 @@
           class="flex flex-row circularBackground bg-[#2f394b9e] hover:bg-orange-600 active:bg-orange-700"
           v-for="label in ratings" :key="label">
           <input v-model="selected" :value="label" type="radio" name="ratings" :id="'element' + label">
-          <label class="select-none mt-1">{{ label }}</label>
+          <label class="select-none mt-1" :for="'element' + label">{{ label }}</label>
         </li>
       </ul>
       <button @click.prevent="activePhase = 2"
