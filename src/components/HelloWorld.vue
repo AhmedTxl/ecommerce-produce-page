@@ -82,7 +82,7 @@
       </main>
     </template>
   </Transition>
-  <footer class="text-slate-300 mt-2">
+  <footer class="text-slate-300 mt-8">
     Challenge by
     <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     <br>
