@@ -29,32 +29,30 @@
   </template>
 
   <Transition name="fade">
-  <template v-if="activePhase == 2">
-    <main class="containerDiv max-w-xs" style="max-width: 410px;">
-      <!-- <h1>{{ msg }}</h1> -->
-      <div class="self-center mt-2">
-        <img src="../assets/illustration-thank-you.svg" alt="">
-      </div>
-      <div class="p-1 pr-4 pl-4 rounded-2xl self-center text-orange-400 text-base mt-8" 
-           style="background: rgb(34 43 54);">
-        You selected {{ ratingChoice }} out of 5
-      </div>
-      <h1 class="self-center mt-9 text-3xl font-semibold">Thank you!</h1>
-      <p class="self-center text-center text-[15px] text-gray-400 mt-5">
-        We appreciate you taking the time to give a rating. If
-        you ever need more support, don’t hesitate to get in touch!
-      </p>
-    </main>
-  </template>
-</Transition>
-<div class="text-slate-300 mt-2">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-      >Frontend Mentor</a
-      >. 
-      <br>
-      Coded by <a href="https://github.com/AhmedTxl">AhmedTx</a>.
-</div>
+    <template v-if="activePhase == 2">
+      <main class="containerDiv max-w-xs" style="max-width: 410px;">
+        <!-- <h1>{{ msg }}</h1> -->
+        <div class="self-center mt-2">
+          <img src="../assets/illustration-thank-you.svg" alt="">
+        </div>
+        <div class="p-1 pr-4 pl-4 rounded-2xl self-center text-orange-400 text-base mt-8"
+          style="background: rgb(34 43 54);">
+          You selected {{ ratingChoice }} out of 5
+        </div>
+        <h1 class="self-center mt-9 text-3xl font-semibold">Thank you!</h1>
+        <p class="self-center text-center text-[15px] text-gray-400 mt-5">
+          We appreciate you taking the time to give a rating. If
+          you ever need more support, don’t hesitate to get in touch!
+        </p>
+      </main>
+    </template>
+  </Transition>
+  <footer class="text-slate-300 mt-2">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    <br>
+    Coded by <a href="https://github.com/AhmedTxl">AhmedTx</a>.
+  </footer>
 </template>
 
 <script>
@@ -111,6 +109,4 @@ const ratings = ["1", "2", "3", "4", "5"];
 .fade-leave-to {
   opacity: 0;
 }
-
-
 </style>
