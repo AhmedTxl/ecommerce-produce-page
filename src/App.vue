@@ -1,17 +1,17 @@
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Rating from './components/Rating.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Rating,
   }
 }
 </script>
 
 <template>
-  <HelloWorld />
+  <Rating />
 </template>
 
 <style>

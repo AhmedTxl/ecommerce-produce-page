@@ -122,7 +122,7 @@ function checkSelectedChoice() {
   }
 }
 
-var activePhase = ref(2);
+var activePhase = ref(1);
 const selected = ref(1);
 const paragraph = ref(
   "Please let us know how we did with your support request." +
