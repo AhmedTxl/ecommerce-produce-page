@@ -25,7 +25,7 @@ body {
         4. Improve text rendering
     */
 body {
-  font-family: 'Overpass', sans-serif !important;
+  font-family: "Overpass", sans-serif !important;
   color: #fff;
   background: rgb(20 21 25);
   text-align: center;
@@ -131,4 +131,14 @@ button {
 input[type="radio"]:checked + li {
   background: #ffffff;
   transition: 0.2s ease;
+}
+
+a {
+  transition: all 360ms;
+}
+
+a:hover {
+  transform: scale(0.2);
+  color: orange;
+  font-size: 22px;
 }

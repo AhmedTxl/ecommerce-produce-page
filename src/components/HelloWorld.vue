@@ -47,6 +47,14 @@
     </main>
   </template>
 </Transition>
+<div class="text-slate-300 mt-2">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+      >. 
+      <br>
+      Coded by <a href="https://github.com/AhmedTxl">AhmedTx</a>.
+</div>
 </template>
 
 <script>
@@ -103,4 +111,6 @@ const ratings = ["1", "2", "3", "4", "5"];
 .fade-leave-to {
   opacity: 0;
 }
+
+
 </style>
