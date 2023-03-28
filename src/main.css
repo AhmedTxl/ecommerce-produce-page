@@ -89,7 +89,7 @@ h6 {
   text-align: left;
   font-size: 18px;
   max-width: 420px;
-  background: linear-gradient(rgb(29 38 49), rgb(23 29 38));
+  background: radial-gradient(farthest-side,#21272f,#191e26);
   color: hsl(0, 0%, 100%);
   padding: 2em;
   border-radius: 2rem;
