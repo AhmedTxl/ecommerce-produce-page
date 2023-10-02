@@ -3,7 +3,7 @@
                 max-lg:px-28 max-md:w-full max-md:mt-0 max-md:px-0">
         <div class="inline-flex items-center justify-around max-md:flex-col 
                     max-md:w-full">
-            <div class="flex flex-col items-center w-[450px] max-lg:w-[24em] max-md:hidden">
+            <div class="flex flex-col items-center w-[450px] max-lg:w-[24em] max-md:hidden max-[825px]:w-80 max-[825px]:mt-[2em]">
                 <a @click="isImgOpened = true" class="cursor-pointer">
                     <img class="rounded-2xl" :src="require('@/assets/images/' + selectedImage.full)"
                         :alt="selectedImage.full" />
@@ -121,7 +121,8 @@
             </Transition>
 
             <div class="flex flex-col justify-start mt-10 items-start gap-4 p-5 text-left ml-24 max-w-[455px]
-                        max-md:p-0 max-md:ml-0 max-md:px-6 max-md:max-w-[95vw] max-[940px]:ml-[6vw] max-sm:mt-7">
+                        max-md:p-0 max-md:ml-0 max-md:px-6 max-md:max-w-[95vw] max-[940px]:ml-[6vw] max-sm:mt-7
+                        max-[895px]:ml-0 max-[815px]:p-4">
                 <h5 class="uppercase text-sm tracking-widest font-bold text-[#ff7d1a]">
                     {{ productInfo.brand }}
                 </h5>
