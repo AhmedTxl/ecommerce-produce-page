@@ -126,7 +126,8 @@
                     {{ productInfo.brand }}
                 </h5>
 
-                <h1 class="text-[4.9ch] leading-[1.135] font-bold mb-3">
+                <h1 class="leading-[1.135] font-bold mb-3"
+                    style="font-size: clamp(3ch, 3.9ch, 4.2ch);">
                     {{ productInfo.productName }}
                 </h1>
 
