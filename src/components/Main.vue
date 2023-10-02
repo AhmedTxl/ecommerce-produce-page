@@ -123,9 +123,9 @@
             <div class="flex flex-col justify-start mt-10 items-start gap-4 p-5 text-left ml-24 max-w-[455px]
                         max-md:p-0 max-md:ml-0 max-md:px-6 max-md:max-w-[95vw] max-[940px]:ml-[6vw] max-sm:mt-7
                         max-[895px]:ml-0 max-[815px]:p-4">
-                <h5 class="uppercase text-sm tracking-widest font-bold text-[#ff7d1a]">
+                <h4 class="uppercase text-sm tracking-widest font-bold text-[#ff7d1a]">
                     {{ productInfo.brand }}
-                </h5>
+                </h4>
 
                 <h1 class="leading-[1.135] font-bold mb-3"
                     style="font-size: clamp(3ch, 3.9ch, 4.2ch);">
@@ -137,28 +137,27 @@
                 </p>
                 <div class="flex flex-col gap-1 max-md:flex-row max-md:justify-between max-md:w-full max-md:items-center">
                     <div class="inline-flex items-center justify-center gap-4">
-                        <h4 class="text-3xl font-bold">${{ calculatePrice() }}</h4>
+                        <h2 class="text-3xl font-bold">${{ calculatePrice() }}</h2>
                         <span :class="productInfo.isDiscounted ? 'block' : 'hidden'"
                             class="text-[#ff7d1a] font-bold bg-[#ff7d1a33] px-[0.6rem] py-[2px] rounded-lg">
                             {{ productInfo.discount }}%
                         </span>
                     </div>
-                    <h5 :class="productInfo.isDiscounted ? 'block' : 'hidden'"
+                    <h3 :class="productInfo.isDiscounted ? 'block' : 'hidden'"
                         class="text-[#b6bcc8] font-bold line-through">
                         ${{ productInfo.price.toFixed(2) }}
-                    </h5>
+                    </h3>
                 </div>
 
                 <div class="inline-flex items-center justify-center gap-4 mt-4 max-md:flex-col max-md:w-full">
                     <div class="select-none inline-flex items-center justify-around h-[3.45rem] 
                                 w-40 bg-[#f7f8fd] rounded-lg max-md:w-full">
-                        <a class="hover:opacity-50 cursor-pointer" @click.prevent="quantity !== 0 ? quantity-- : quantity">
+                        <a class="hover:opacity-50 cursor-pointer" @click.prevent="quantity !== 0 ? quantity-- : quantity"  aria-label="Decrease Quantity">
                             <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
                                     <path
-                                        d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
-                                        id="a"></path>
+                                        d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"></path>
                                 </defs>
                                 <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"></use>
                             </svg>
@@ -166,13 +165,12 @@
                         <span class="font-bold w-2.5">
                             {{ quantity }}
                         </span>
-                        <a class="hover:opacity-50 cursor-pointer" @click.prevent="quantity++">
+                        <a class="hover:opacity-50 cursor-pointer" @click.prevent="quantity++" aria-label="Increase Quantity">
                             <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
                                     <path
-                                        d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
-                                        id="b" />
+                                        d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"/>
                                 </defs>
                                 <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
                             </svg>
@@ -181,7 +179,8 @@
                     <a @click="addToBasket()" class="font-bold text-sm flex flex-row items-center bg-[#ff7d1a] 
                                 hover:opacity-50 transition-all h-[3.45rem] w-64 justify-center 
                                 rounded-lg shadow-lg cursor-pointer select-none text-white 
-                                shadow-orange-500/50 max-md:w-full max-md:mb-20">
+                                shadow-orange-500/50 max-md:w-full max-md:mb-20"
+                        aria-label="Add To Cart">
                         <svg class="mr-2" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"

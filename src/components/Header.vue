@@ -20,7 +20,7 @@
             <ul class="flex items-center gap-8 max-lg:gap-4 max-md:hidden">
                 <li class="transition-all flex items-center h-28 hover:border-b-4 hover:border-b-[#ff7d1a]
                             [&_a]:hover:text-[#000]" v-for="item in navList" :key="item">
-                    <a class="text-[#68707d] hover:font-semibold" href="#">{{ item }}</a>
+                    <a class="text-[#68707d] hover:font-semibold" href="#" :aria-label=item>{{ item }}</a>
                 </li>
             </ul>
         </div>
@@ -33,7 +33,7 @@
                 <ul class="flex flex-col items-start mt-12 gap-4">
                     <li class="transition-all flex items-center hover:underline
                     [&_a]:hover:text-[#000]" v-for="item in navList" :key="item">
-                        <a class="text-[#000] font-bold text-xl" href="#">{{ item }}</a>
+                        <a class="text-[#000] font-bold text-xl" href="#" :aria-label=item>{{ item }}</a>
                     </li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
 
         <!-- Cart & Avatar Container -->
         <div class="inline-flex items-center justify-center gap-[2vw]">
-            <a class="relative [&_path]:hover:fill-[#000] w-[30px]" @click="isCartOpened = !isCartOpened" href="#">
+            <a class="relative [&_path]:hover:fill-[#000] w-[30px]" aria-label="Cart" @click="isCartOpened = !isCartOpened" href="#">
                 <span v-show="!isBasketEmpty"
                     class="absolute -right-2 -top-2  
                             inline-flex items-center justify-center text-white text-[10px] font-bold w-5 h-4 rounded-full bg-orange-500">
