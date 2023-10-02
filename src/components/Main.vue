@@ -135,7 +135,7 @@
                 <p class="text-[#68707d] text-[15.75px] leading-relaxed mb-2">
                     {{ productInfo.productDescription }}
                 </p>
-                <div class="flex flex-col gap-1 max-md:flex-row max-md:justify-between max-md:w-full">
+                <div class="flex flex-col gap-1 max-md:flex-row max-md:justify-between max-md:w-full max-md:items-center">
                     <div class="inline-flex items-center justify-center gap-4">
                         <h4 class="text-3xl font-bold">${{ calculatePrice() }}</h4>
                         <span :class="productInfo.isDiscounted ? 'block' : 'hidden'"
