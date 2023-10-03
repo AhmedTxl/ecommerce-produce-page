@@ -4,17 +4,17 @@
         <div class="inline-flex items-center justify-around max-md:flex-col 
                     max-md:w-full">
             <div class="flex flex-col items-center w-[450px] max-lg:w-[24em] max-md:hidden max-[825px]:w-80 max-[825px]:mt-[2em]">
-                <a @click="isImgOpened = true" class="cursor-pointer">
+                <a @click="isImgOpened = true" href="#" class="cursor-pointer">
                     <img class="rounded-2xl" :src="require('@/assets/images/' + selectedImage.full)"
                         :alt="selectedImage.full" />
                 </a>
                 <ul class="overflow-hidden inline-flex gap-6">
                     <li class="mt-8 whitespace-nowrap cursor-pointer" @click="selectedImage = image"
                         v-for="(image, index) in productImages" :key="index">
-                        <a :class="JSON.stringify(selectedImage) === JSON.stringify(image)
+                        <a  href="#"
+                            :class="JSON.stringify(selectedImage) === JSON.stringify(image)
                             ? 'block rounded-2xl border-[#ff7d1a] border-2'
-                            : 'border-none opacity-100'
-                            ">
+                            : 'border-none opacity-100'">
                             <img :class="JSON.stringify(selectedImage) === JSON.stringify(image)
                                 ? 'opacity-50'
                                 : 'opacity-100'" class="transition-all rounded-xl hover:opacity-50"
@@ -28,6 +28,7 @@
             <div class="relative inline-flex items-center justify-center 
                         md:hidden max-md:w-full">
                 <a @click="prevImage"
+                    href="#"
                     class="absolute left-0 translate-x-[25%] translate-y-[-50%] mr-5 inline-flex items-center justify-center z-50 px-5 py-[1.1em] rounded-full bg-white cursor-pointer [&_path]:hover:transition-all [&_path]:hover:stroke-orange-500">
                     <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
@@ -45,7 +46,9 @@
                         :src="require('@/assets/images/' + selectedImage.full)" :alt="selectedImage.full"
                         :key="selectedImage.full" />
                 </Transition>
-                <a @click="nextImage" class="absolute right-0 translate-x-[15%] translate-y-[-50%] mr-5 
+                <a @click="nextImage" 
+                    href="#"
+                    class="absolute right-0 translate-x-[15%] translate-y-[-50%] mr-5 
                     inline-flex items-center justify-center z-50 px-5 py-[1.1em] rounded-full 
                     bg-white cursor-pointer [&_path]:hover:transition-all [&_path]:hover:stroke-orange-500">
                     <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +77,11 @@
                     <!-- The full image display with PREV and NEXT navigation buttons -->
                     <div class="relative inline-flex items-center justify-center">
                         <a @click="prevImage"
-                            class="absolute left-0 translate-x-[-50%] translate-y-[-50%] mr-5 inline-flex items-center justify-center z-50 px-5 py-[1.1em] rounded-full bg-white cursor-pointer [&_path]:hover:transition-all [&_path]:hover:stroke-orange-500">
+                            href="#"
+                            class="absolute left-0 translate-x-[-50%] translate-y-[-50%] mr-5 
+                                inline-flex items-center justify-center z-50 px-5 py-[1.1em] 
+                                rounded-full bg-white cursor-pointer [&_path]:hover:transition-all 
+                                [&_path]:hover:stroke-orange-500">
                             <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
                             </svg>
@@ -86,7 +93,11 @@
                                 :alt="selectedImage.full" :key="selectedImage.full" />
                         </Transition>
                         <a @click="nextImage"
-                            class="absolute right-0 translate-x-[85%] translate-y-[-50%] mr-5 inline-flex items-center justify-center z-50 px-5 py-[1.1em] rounded-full bg-white cursor-pointer [&_path]:hover:transition-all [&_path]:hover:stroke-orange-500">
+                            href="#"
+                            class="absolute right-0 translate-x-[85%] translate-y-[-50%] mr-5 
+                                inline-flex items-center justify-center z-50 px-5 py-[1.1em] 
+                                rounded-full bg-white cursor-pointer [&_path]:hover:transition-all 
+                                [&_path]:hover:stroke-orange-500">
                             <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
                             </svg>
@@ -96,10 +107,11 @@
                     <ul class="overflow-hidden inline-flex gap-6">
                         <li class="mt-8 cursor-pointer" @click="selectedImage = image"
                             v-for="(image, index) in productImages" :key="index">
-                            <a class="relative block" :class="JSON.stringify(selectedImage) === JSON.stringify(image)
+                            <a class="relative block"
+                                href="#"
+                                :class="JSON.stringify(selectedImage) === JSON.stringify(image)
                                 ? ' rounded-[13.5px] border-[#ff7d1a] border-2'
-                                : 'border-none opacity-100'
-                                ">
+                                : 'border-none opacity-100'">
                                 <img :class="JSON.stringify(selectedImage) === JSON.stringify(image)
                                     ? 'brightness-[1.05]'
                                     : 'brightness-[0.9]'
@@ -170,7 +182,8 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
                                     <path
-                                        d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"/>
+                                        d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                                        id="b" />
                                 </defs>
                                 <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
                             </svg>
