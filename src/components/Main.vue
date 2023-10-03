@@ -164,7 +164,7 @@
                 <div class="inline-flex items-center justify-center gap-4 mt-4 max-md:flex-col max-md:w-full">
                     <div class="select-none inline-flex items-center justify-around h-[3.45rem] 
                                 w-40 bg-[#f7f8fd] rounded-lg max-md:w-full">
-                        <a class="hover:opacity-50 cursor-pointer" @click.prevent="quantity !== 0 ? quantity-- : quantity"  aria-label="Decrease Quantity">
+                        <a class="hover:opacity-50 cursor-pointer" @click.prevent="quantity !== 0 ? quantity-- : quantity" href="#" aria-label="Decrease Quantity">
                             <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
@@ -177,7 +177,7 @@
                         <span class="font-bold w-2.5">
                             {{ quantity }}
                         </span>
-                        <a class="hover:opacity-50 cursor-pointer" @click.prevent="quantity++" aria-label="Increase Quantity">
+                        <a class="hover:opacity-50 cursor-pointer" @click.prevent="quantity++" href="#" aria-label="Increase Quantity">
                             <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
@@ -189,7 +189,8 @@
                             </svg>
                         </a>
                     </div>
-                    <a @click="addToBasket()" class="font-bold text-sm flex flex-row items-center bg-[#ff7d1a] 
+                    <a @click="addToBasket()" href="#" 
+                        class="font-bold text-sm flex flex-row items-center bg-[#ff7d1a] 
                                 hover:opacity-50 transition-all h-[3.45rem] w-64 justify-center 
                                 rounded-lg shadow-lg cursor-pointer select-none text-white 
                                 shadow-orange-500/50 max-md:w-full max-md:mb-20"
