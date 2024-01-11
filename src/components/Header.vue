@@ -6,7 +6,7 @@
             <!-- Menu Button of Small Screens -->
             <button @click="active = !active" class="hidden mr-4 max-md:block z-[80]">
                 <img v-show="!active" src="../assets/icons/icon-menu.svg" alt="">
-                <img v-show="active" class="absolute top-[1.5rem] right-100 bottom-0" src="../assets/icons/icon-close.svg"
+                <img v-show="active" class="absolute top-[1.75rem] right-100 bottom-0" src="../assets/icons/icon-close.svg"
                     alt="">
             </button>
             <a :class="active ? 'mr-[-50%]' : 'mr-12'" class="block max-[400px]:mr-1 w-[140px]" href="#" aria-label="Sneakers Logo">
